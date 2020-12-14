@@ -568,7 +568,7 @@ function group(myArray, keySelector, valueSelector) {
  *   ['one','two','three'], x=>x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
 function selectMany(arr, childrenSelector) {
-  return arr.flatMap((item) => childrenSelector(item));
+  return arr.map((x) => childrenSelector(x)).flat();
 }
 
 /**
